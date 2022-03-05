@@ -2,7 +2,16 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>Welcome, <%= user ? user.profile.name : "guest" %></h1>
+<% if(!user){ %>
+    <h2>Welcome Message for guest</h2>
+    <h3>As a guest you can...</h3>
+    <h3>perks for being a user</h3>
+    <a href="">Sign in with Google for full access</a>
+  <% } %>  
+
+
+
   <% if (user?.profile.avatar) { %>
     <div>
       <img

@@ -4,9 +4,17 @@
 </head>
 <body>
   <nav>
+    <ul>
+      <li><a href=""> View Weapons</a></li>
+      <li><a href=""> View Weapons</a></li>
+      <li><a href=""> View Weapons</a></li>
+      <li><a href=""> View Weapons</a></li>
+      <!-- <li>Add Meals</li>
+      <li>Add Monster</li> -->
+    </ul>
     <% if (user) { %>
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
+        <button id="logout-btn" type="submit">Logout</button>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">

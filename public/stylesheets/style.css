@@ -31,6 +31,7 @@ nav {
   justify-content: center;
 }
 
+
 main {
   display: flex;
   align-items: center;
@@ -40,4 +41,13 @@ main {
 
 h1 {
   font-size: 3.6rem;
+}
+
+ul{
+  display: inline;
+  list-style: none;
+  text-align: left;
+}
+li{
+  display: inline;
 }

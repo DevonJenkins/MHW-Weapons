@@ -7,7 +7,8 @@ const router = Router()
 //GET localhost3000: /weapons
 router.get('/', weaponsCtrl.index)
   
-
+//POST localhost:3000/weapons   add is logged in once testing is complete
+router.post('/', weaponsCtrl.create)
 
 
 

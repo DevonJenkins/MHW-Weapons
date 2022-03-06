@@ -15,8 +15,23 @@ function index(req, res){
   })
 }
 
+function create(req, res){
+  //req.body.owner = req.user.profile._id
+
+  Weapon.create(req.body)
+  .then(weapon => {
+    res.redirect("/weapons")
+  })
+  .catch(err => {
+    console.log('error')
+    res.redirect("/weapons")
+  })
+}
+
 
 
 export {
-  index
+  index,
+  create,
+
 }

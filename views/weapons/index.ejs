@@ -5,6 +5,21 @@
 
 <h1>ALL THE Weapons</h1>
 
+
+<section>
+  <% //if(user){ %>
+    <h2>add a weapon</h2>
+<form action="/weapons" method="POST">
+  <label >
+      Weapon Name:
+      <input type="text" name="name" id="new-weapon-input">
+  </label>
+<button type="submit">Add Weapon</button>
+</form>
+
+    <% //} %>  
+</section>
+
 <% if(weapons.length){   %> 
 <main>
   <h1>Weapons List</h1>
@@ -17,16 +32,14 @@
     <tbody>
       <% weapons.forEach( weapon => { %>
         <tr>
-          <td><% weapon.name %> </td>
+          <td><%= weapon.name %> </td>
         </tr>
       <% }) %> 
     </tbody>
   </table>
   <% }else{ %>
       <h2>no weapons yet</h2>
-      <p>click the "new weapon" button in the nav bar to add a new button</p>
   <% } %> 
-
 </main>
 
 

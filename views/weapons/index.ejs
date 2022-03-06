@@ -1,0 +1,35 @@
+<%- include('../partials/html-head') %>
+
+<%- include('../partials/nav') %>
+
+
+<h1>ALL THE Weapons</h1>
+
+<% if(weapons.length){   %> 
+<main>
+  <h1>Weapons List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Weapon Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% weapons.forEach( weapon => { %>
+        <tr>
+          <td><% weapon.name %> </td>
+        </tr>
+      <% }) %> 
+    </tbody>
+  </table>
+  <% }else{ %>
+      <h2>no weapons yet</h2>
+      <p>click the "new weapon" button in the nav bar to add a new button</p>
+  <% } %> 
+
+</main>
+
+
+
+
+<%- include('../partials/footer') %>

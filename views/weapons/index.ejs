@@ -3,8 +3,7 @@
 <%- include('../partials/nav') %>
 
 
-<h1>ALL THE Weapons</h1>
-
+<h1>ALL THE WEAPONS</h1>
 
 <section>
   <% //if(user){ %>
@@ -16,7 +15,6 @@
   </label>
 <button type="submit">Add Weapon</button>
 </form>
-
     <% //} %>  
 </section>
 
@@ -32,8 +30,7 @@
     <tbody>
       <% weapons.forEach( weapon => { %>
         <tr>
-          <td><%= weapon.name %> </td>
-        </tr>
+          <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
       <% }) %> 
     </tbody>
   </table>

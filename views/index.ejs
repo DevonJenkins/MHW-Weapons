@@ -1,6 +1,7 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
+<% title = 'Hello' %> 
 <main>
   <h1>Welcome, <%= user ? user.profile.name : "guest" %></h1>
 <% if(!user){ %>

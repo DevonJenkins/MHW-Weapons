@@ -1,12 +1,11 @@
 import { Weapon } from "../models/weapon.js";
 
 function index(req, res){
-  console.log("hello index")
   Weapon.find({})
   .then(weapons =>{ 
     res.render('weapons/index', {
       weapons,
-      title: "weapons"
+      title: "Weapons"
     })
   })
   .catch(err => {
@@ -28,10 +27,27 @@ function create(req, res){
   })
 }
 
+function show(req, res){
+  console.log('weapons show')
+  Weapon.findById(req.params.id)
+  //.populate("owner")
+  .then( weapon => {
+    res.render('weapons/show',{
+      weapon,
+      title: "weapon details"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/weapons')
+  })
+}
+
 
 
 export {
   index,
   create,
+  show,
 
 }

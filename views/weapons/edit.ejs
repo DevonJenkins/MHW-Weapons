@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit the Weapon! </h1>
+  <form action="/weapons/<%= weapon._id %>?_method=PUT" method="POST">
+    <label>
+      Name:
+      <input 
+        type="text" 
+        name="name" 
+        autocomplete="off"
+        value="<%= weapon.name %>"
+      >
+    </label>
+    <button type="submit">Edit the Weapon</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

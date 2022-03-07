@@ -9,10 +9,18 @@
 
 
 <section>
-	<p>From the kitchen of <%= //weapon.owner.name %>...</p>
+	<p>From <%= //weapon.owner.name %>so n so's arsenal </p>
 
-  <h1><%= weapon.name %> 🌮</h1>
-  <h2>This taco is <%= weapon.tasty ? 'tasty! 😋' : 'not tasty! 😫' %></h2>
+  <h1><%= weapon.name %> 🗡🦖</h1>
+
+only show if user
+  <form action="/weapons/<%= weapon._id %>?_method=DELETE" method="POST">
+    <button class="btn" type="submit">Delete this weapon 😠</button>
+  </form>
+
+  <h1>show a weapon desription only if one has been written</h1>
+  <h2>This is a weapon %></h2>
+  <h2>stats table here</h2>
 </section>
 
 

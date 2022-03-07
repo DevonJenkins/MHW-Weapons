@@ -28,7 +28,7 @@ function create(req, res){
 }
 
 function show(req, res){
-  console.log('weapons show')
+  
   Weapon.findById(req.params.id)
   //.populate("owner")
   .then( weapon => {
@@ -43,11 +43,32 @@ function show(req, res){
   })
 }
 
+function deleteWeapon(req, res){
+  console.log('weapons delete')
+
+  Weapon.findById(req.params.id)
+  .then(weapon => {
+    // if (weapon.owner.equals(req.user.profile._id)){
+      weapon.delete()
+      .then(() => {
+        res.redirect("/weapons")
+      })
+    // }else{
+    //   throw new Error ("UNAUTHORIZED ACCESS")
+    // }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/weapons')
+  })
+}
+
 
 
 export {
   index,
   create,
   show,
+  deleteWeapon as delete,
 
 }

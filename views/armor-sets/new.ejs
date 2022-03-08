@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+
+<%- include('../partials/nav') %>
+
+
+
+<h1>new Armor</h1>
+
+<section>
+  <% //if(user){ %>
+    <h2>add an armor piece</h2>
+<form action="/" method="POST">
+  <label >
+      Armor Name:
+      <input type="text" name="name" id="new-armor-input">
+  </label>
+<button type="submit">Add Armor</button>
+</form>
+    <% //} %>  
+</section>
+
+
+<%- include('../partials/footer') %>

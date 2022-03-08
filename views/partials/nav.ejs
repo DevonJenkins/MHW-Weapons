@@ -4,15 +4,15 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li><a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a></li>
-      <li><a href=""> Build Armor Set</a></li> 
+    
+      <a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a>
+      <a href="/armor-sets" <%- title === 'View Armor Sets' %> > View Armor Set</a>
 
       <!-- <li><a href=""> Add Compatible Armor Set</a></li> -->
 
       <!-- <li>Add Meals</li>
       <li>Add Monster</li> -->
-    </ul>
+    
     <% if (user) { %>
       <a href="/auth/logout">
         <button id="logout-btn" type="submit">Logout</button>

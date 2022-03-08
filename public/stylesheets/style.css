@@ -28,7 +28,8 @@ nav {
   background-color: white;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+
 }
 
 
@@ -43,11 +44,9 @@ h1 {
   font-size: 3.6rem;
 }
 
-ul{
-  display: inline;
+
+li{
+
   list-style: none;
   text-align: left;
-}
-li{
-  display: inline;
 }

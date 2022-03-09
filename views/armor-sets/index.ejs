@@ -14,13 +14,15 @@
 <li>Head Body Arms Waist Legs  <a href="">DETAILS</a></li>
 </ul>
 
+<% if (armorSets.Length){ %> 
+<h1>hello</h1>
+<% }else{ %>
+  <h1>no sets added yet</h1>
+<% } %> 
 
 
 
 
 
-
-
-
-<h1><a href="/armor-sets/new"><button>Click here to build a new set</button></a></h1>
+<h1><a href="/armors/new"><button>Click here to build a new set</button></a></h1>
 <%- include('../partials/footer') %>

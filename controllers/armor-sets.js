@@ -1,4 +1,5 @@
 import { ArmorSet } from "../models/armor-set.js";
+import { Armor } from "../models/armor.js";
 
 function index(req, res){
   ArmorSet.find({})
@@ -15,10 +16,15 @@ function index(req, res){
 }
 
 function newArmorSet(req, res){
+  Armor.find({})
+  .then(armor => {
   res.render('armor-sets/new', {
-    title: 'Add Armor'
+    title: 'Build Armor Set',
+    armor
   })
-}
+})}
+
+
 
 export {
 index,

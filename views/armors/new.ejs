@@ -5,10 +5,11 @@
 
 
 <h1><%= title %> </h1>
+<h1>this is for armors</h1>
 
 <section>
 
-  <form action="/armor-sets/new" method="POST">
+  <form action="/armors" method="POST">
   <label >
       Armor Name:
       <input type="text" name="name" id="new-armor-input">
@@ -17,6 +18,7 @@
 
 this field will add new individual pieces of armor to the database. I shouldnt have to render a new view for this but i will have to get them to show in the dropdown menu
 
+</form>
 <select name="" id="">
   <% armor.forEach(armor => { %>
     <option><%= armor.name %> </option>
@@ -24,8 +26,7 @@ this field will add new individual pieces of armor to the database. I shouldnt h
     
     <h2>add an armor piece</h2>
 
-    <% //} %>  
-</form>
+
 
 </section>
 

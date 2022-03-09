@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const armorSetSchema = new Schema({
   name: String,
-  type: String,
   stats: Number,
+  //add armor pieces to schema:head body waist arms legs
   //combine armor piece stats to figure out armor set stats. 
 })
 

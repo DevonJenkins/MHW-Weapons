@@ -97,6 +97,11 @@ function update(req, res){
   })
 }
 
+
+
+//show function to illustrate compatible armor pieces 
+
+
 //remember to go back and uncomment those owner/profile id details. this is necessary for future authorization/guest restriction. 
 
 

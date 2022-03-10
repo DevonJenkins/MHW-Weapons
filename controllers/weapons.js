@@ -1,3 +1,4 @@
+import { Armor } from "../models/armor.js";
 import { Weapon } from "../models/weapon.js";
 
 function index(req, res){
@@ -32,10 +33,13 @@ function show(req, res){
   .populate('armors')
   //.populate("owner")
   .then( weapon => {
-    res.render('weapons/show',{
-      weapon,
-      title: "weapon details",
-      armors
+    Armor.find({_id: {$nin: weapon.armors}}).then( armors =>{ 
+
+      res.render('weapons/show',{
+        weapon,
+        title: "weapon details",
+        armors
+      })
     })
   })
   .catch(err => {
@@ -99,6 +103,15 @@ function update(req, res){
   })
 }
 
+function addArmor(req, res) {
+  console.log('add armor')
+  Weapon.findById(req.params.id)
+  .then(weapon => {
+    weapon.armors.push(req.body.armorId)
+    weapon.save()
+    res.redirect(`/weapons/${req.params.id}`)
+  })
+}
 
 
 //show function to illustrate compatible armor pieces 
@@ -114,5 +127,6 @@ export {
   edit,
   deleteWeapon as delete,
   update,
+  addArmor
 
 }

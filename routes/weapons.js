@@ -20,6 +20,8 @@ router.put('/:id', weaponsCtrl.update)
 //DELETE - localhost:3000/weapons/:id
 router.delete('/:id', weaponsCtrl.delete)
 
+router.post('/:id/armors', weaponsCtrl.addArmor)
+
 export{
     router
   }

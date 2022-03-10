@@ -43,14 +43,18 @@ only show if user
   </ul>
 
 
-  <form action="/weapons/<%= armor.id %>/armors " method="POST">
-  <select name="name" id="">
-    <option value="<%= armor._id %> ">
-      <%= armor.name %> 
+  <form action="/weapons/<%= weapon.id %>/armors " method="POST">
+  <select name="armorId" id="">
+    <% armors.forEach( armor => { %>
 
-    </option>
+      <option value="<%=armor._id%>">
+        <%= armor.name %> 
+        
+      </option>
+      <% }) %> 
+
   </select>
-  
+  <button type="submit">submit</button>
   </form>
 
 

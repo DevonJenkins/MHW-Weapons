@@ -34,7 +34,7 @@ https://i.imgur.com/AfRefsZ.pngg)
 
 - ![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)
 
-- ![Express Badge](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+- ![Express Badge](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
 
 - ![MONGOOSE](https://img.shields.io/badge/-Mongoose-inactive?logo=MongoDB&logoColor=white&style=flat-square)
 

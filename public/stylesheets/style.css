@@ -22,10 +22,11 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   margin: 0;
+  max-height: 10vh;
 }
 
 nav {
-  background-color: white;
+  background-color: rgb(134, 37, 37);
   font-size: 1.6rem;
   display: flex;
   justify-content: left;
@@ -49,4 +50,18 @@ li{
 
   list-style: none;
   text-align: left;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(66, 197, 66);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius:6px;
+  border: rgb(224, 30, 30) solid 2px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+a:hover{
+  background: yellow;
+  color: aqua;
 }

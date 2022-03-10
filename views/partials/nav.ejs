@@ -6,7 +6,7 @@
   <nav>
   
       <a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a>  
-      <a href="/armors/new" <%- title === 'View Armor Sets' %> > Add Armor</a> 
+      <a href="/armors/new" <%- title === 'Add Armor' %> > Add Armor</a> 
         <% if (user) { %>
           <a href="/auth/logout">
             <button id="logout-btn" type="submit">Logout</button>

@@ -6,6 +6,7 @@ const armorSchema = new Schema({
   name: {type: String, required: true, unique: true},
   armorType: String,
   defense: Number,
+  skill: String
 
 })
 

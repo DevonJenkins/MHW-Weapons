@@ -13,6 +13,7 @@
           <%= armor.name %>
           <%= armor.armorType %>
           <%= armor.defense %>
+          <%= armor.skill %>
       </option>
     <% }); %> 
       
@@ -23,17 +24,32 @@
     <!-- write out input model within this form -->
   <label >
       Armor Name:
+      <br>
       <input type="text" name="name" id="new-armor-input">
+      <br>
   </label>
   <label >
       Armor Type:
+      <br>
       <select type="text" name="armorType" id="new-armor-input">
           <option value="Head">Head</option>
+          <option value="Body">Body</option>
+          <option value="Arms">Arms</option>
+          <option value="Waist">Waist</option>
+          <option value="Legs">Legs</option>
       </select>
+      <br>
   </label>
   <label >
       Defense Rating:
+      <br>
       <input type="text" name="defense" id="new-armor-input">
+      <br>
+  </label>
+  <label >
+          Armor Skill:
+          <br>
+      <input type="text" name="skill" id="new-armor-input">
   </label>
 <button type="submit">Add Armor</button>
 </form>
@@ -57,18 +73,14 @@
 
       <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
         <li>
-          <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+          <%= armor.name %> 
+          <%= armor.armorType %>
+          <%= armor.defense %>  
+          <%= armor.skill %>   
           <button>X</button>
         
         </li>
       </form>
-
-
-        <!-- <div>
-          <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
-          <p><%= armor.armorType %> </p>
-          <p><%= armor.defense %> </p>
-        </div> -->
       <% }  %>
     <% }); %> 
     <br>
@@ -83,11 +95,6 @@
             
           </li>
         </form>
-        <!-- <div>
-          <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
-          <p><%= armor.armorType %> </p>
-          <p><%= armor.defense %> </p>
-        </div> -->
       <% }  %>
     <% }); %> 
 </form>

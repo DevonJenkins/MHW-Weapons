@@ -7,23 +7,43 @@
 <h1><%= title %> </h1>
 
 <section>
-
+  <select name="" id="">
+    <% armor.forEach(armor => { %>
+      <option>
+          <%= armor.name %>
+          <%= armor.armorType %>
+          <%= armor.defense %>
+      </option>
+    <% }); %> 
+      
+      <h2>add an armor piece</h2>
+  
+      <select name="" id="">
   <form action="/armors" method="POST">
+    <!-- write out input model within this form -->
   <label >
       Armor Name:
       <input type="text" name="name" id="new-armor-input">
   </label>
+  <label >
+      Armor Type:
+      <select type="text" name="armorType" id="new-armor-input">
+          <option value="Head">Head</option>
+      </select>
+  </label>
+  <label >
+      Defense Rating:
+      <input type="text" name="defense" id="new-armor-input">
+  </label>
+  
+
+
+
+
+
 <button type="submit">Add Armor</button>
-
 </form>
-<select name="" id="">
-  <% armor.forEach(armor => { %>
-    <option><%= armor.name %> </option>
-  <% }); %> 
-    
-    <h2>add an armor piece</h2>
 
-    <select name="" id="">
 </section>
 
 
@@ -42,16 +62,16 @@
 
 <section>
   <form action="/armor-sets" method="POST">
-
-
-  <h1>Build Armor set here</h1>
   <p>head body arms waist legs</p>
-  <select name="name" id="">
+
     <% armor.forEach(armor => { %>
-      <option><%= armor.name %> </option>
+      <div>
+        <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
+        <p><%= armor.armorType %> </p>
+        <p><%= armor.defense %> </p>
+      </div>
     <% }); %> 
-  </select>
-  <p>When this <button>button</button> is clicked, send me to armor-sets/index</p>
+
 </form>
 
 </section>

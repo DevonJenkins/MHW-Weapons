@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema
 
 const armorSchema = new Schema({
-  name: String,
-  type: String,
-  stats: Number,
+  name: {type: String, required: true, unique: true},
+  armorType: String,
+  defense: Number,
   //combine armor piece stats to figure out armor set stats. 
 })
 

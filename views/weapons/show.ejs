@@ -9,13 +9,12 @@
 
 
 <section>
-	<p>From <%= //weapon.owner.name %>so n so's arsenal </p>
+	<p>From <%= //weapon.owner.name %>so n so's armory </p>
 
   <h1><%= weapon.name %> 🗡🦖</h1>
 
 only show if user
 
-<form action=""></form>
 
   <form action="/weapons/<%= weapon._id %>/edit" method="GET">
     <button class="btn" type="submit">Edit this weapon </button>
@@ -24,23 +23,36 @@ only show if user
   <form action="/weapons/<%= weapon._id %>?_method=DELETE" method="POST">
     <button class="btn" type="submit">Delete this weapon 😠</button>
   </form>
-
-  <h1>show a weapon desription only if one has been written</h1>
   <h2>This is a weapon %></h2>
   <h2>stats table here</h2>
 </section>
 
 
 <label for="armors">Compatible Armor Pieces</label>
-  <ul name="armors">
+
     <% if (weapon.armors.length){ %>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Defense</th>
+    </thead>
+    <tbody>
       <% weapon.armors.forEach(armor => { %>
-        <li><%= armor.name %></li>
-      <% }) %> 
-    <% }else{ %>
-<h1>no armor pieces added yet</h1>
-    <% } %>  
-  </ul>
+        <tr>
+          
+          <td><%= armor.name %></td>
+          <td><%= armor.type %></td>
+          <td><%= armor.defense %></td>
+          
+        </tr>
+          <% }) %> 
+      </tbody>
+    </table>
+      <% }else{ %>
+        <h1>no armor pieces added yet</h1>
+        <% } %>  
+
 
 
   <form action="/weapons/<%= weapon.id %>/armors " method="POST">

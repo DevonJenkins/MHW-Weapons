@@ -4,24 +4,18 @@
 </head>
 <body>
   <nav>
-    
-      <a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a>
-      <a href="/armor-sets" <%- title === 'View Armor Sets' %> > View Armor Set</a>
-
-      <!-- <li><a href=""> Add Compatible Armor Set</a></li> -->
-
-      <!-- <li>Add Meals</li>
-      <li>Add Monster</li> -->
-    
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button id="logout-btn" type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+  
+      <a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a>  
+      <a href="/armors/new" <%- title === 'View Armor Sets' %> > Add Armor</a> 
+        <% if (user) { %>
+          <a href="/auth/logout">
+            <button id="logout-btn" type="submit">Logout</button>
+          </a>
+        <% } else { %>
+          <a href="/auth/google" class="siwg-link">
+            <button type="submit" class="siwg">
+              <img id="siwg-image" alt="Sign in with Google" />
+            </button>
+          </a>
+        <% } %>
   </nav>

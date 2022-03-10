@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const weaponSchema = new Schema({
   name: String,
-  type: String,
+  weaponType: String,
   sharpness: Number,
   affinity: String,
   element: String,

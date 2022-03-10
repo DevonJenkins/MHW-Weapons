@@ -15,7 +15,6 @@ function newArmor(req, res){
   }
 
 function create(req, res){
-  console.log('hitting controller')
   Armor.create(req.body)
   .then(armor => {
     res.redirect('/armors/new')
@@ -26,8 +25,25 @@ function create(req, res){
   })
 }
 
+function deleteArmor(req, res) {
+  console.log('hitting controller')
+  Armor.findById(req.params.id)
+  .then(armor =>{
+    armor.delete()
+    .then(() => {
+      res.redirect('/armors/new')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/armors/new')
+  })
+  }
+
+
 
 export{
   newArmor as new,
-  create
+  create,
+  deleteArmor as delete
 }

@@ -35,12 +35,6 @@
       Defense Rating:
       <input type="text" name="defense" id="new-armor-input">
   </label>
-  
-
-
-
-
-
 <button type="submit">Add Armor</button>
 </form>
 
@@ -57,26 +51,43 @@
 </section>
 
 <section>
-  <form action="/armor-sets" method="POST">
     <h2>Headwear</h2>
     <% armor.forEach(armor => { %>
       <% if (armor.armorType == 'Head'){ %> 
-        <div>
+
+      <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+        <li>
+          <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+          <button>X</button>
+        
+        </li>
+      </form>
+
+
+        <!-- <div>
           <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
           <p><%= armor.armorType %> </p>
           <p><%= armor.defense %> </p>
-        </div>
+        </div> -->
       <% }  %>
     <% }); %> 
     <br>
     <h2>Not Headwear</h2>
     <% armor.forEach(armor => { %>
       <% if (armor.armorType !== 'Head'){ %> 
-        <div>
+
+        <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+          <li>
+            <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+            <button>X</button>
+            
+          </li>
+        </form>
+        <!-- <div>
           <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
           <p><%= armor.armorType %> </p>
           <p><%= armor.defense %> </p>
-        </div>
+        </div> -->
       <% }  %>
     <% }); %> 
 </form>

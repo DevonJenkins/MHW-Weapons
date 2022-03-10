@@ -6,7 +6,7 @@ const armorSchema = new Schema({
   name: {type: String, required: true, unique: true},
   armorType: String,
   defense: Number,
-  //combine armor piece stats to figure out armor set stats. 
+
 })
 
 

@@ -18,7 +18,7 @@ const weaponSchema = new Schema({
   kinsectBonus: String,//should i include this field
   coatings: String,
   customMods: String, ///should I include this field? 
-
+  armors: [{type: Schema.Types.ObjectId, ref:'Armor'}]
   //I might have to do some "research" to figure out what some of these mean. I may end up switching up the datatatype to make the app more cohesive with the actual game. 
 })
 

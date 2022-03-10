@@ -31,8 +31,27 @@ only show if user
 </section>
 
 
+<label for="armors">Compatible Armor Pieces</label>
+  <ul name="armors">
+    <% if (weapon.armors.length){ %>
+      <% weapon.armors.forEach(armor => { %>
+        <li><%= armor.name %></li>
+      <% }) %> 
+    <% }else{ %>
+<h1>no armor pieces added yet</h1>
+    <% } %>  
+  </ul>
 
 
+  <form action="/weapons/<%= armor.id %>/armors " method="POST">
+  <select name="name" id="">
+    <option value="<%= armor._id %> ">
+      <%= armor.name %> 
+
+    </option>
+  </select>
+  
+  </form>
 
 
 

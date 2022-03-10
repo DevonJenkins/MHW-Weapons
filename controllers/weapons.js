@@ -28,13 +28,14 @@ function create(req, res){
 }
 
 function show(req, res){
-  
   Weapon.findById(req.params.id)
+  .populate('armors')
   //.populate("owner")
   .then( weapon => {
     res.render('weapons/show',{
       weapon,
-      title: "weapon details"
+      title: "weapon details",
+      armors
     })
   })
   .catch(err => {
@@ -68,7 +69,8 @@ function edit(req, res){
   .then(weapon => {
     res.render("weapons/edit",{
       weapon,
-      title: "weapon edit"
+      title: "weapon edit",
+      
     })
   })
   .catch(err => {

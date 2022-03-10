@@ -54,26 +54,32 @@
       <option value="">No armor added yet</option>
     <% } %> 
   </select>
-
-
-
-
 </section>
 
 <section>
   <form action="/armor-sets" method="POST">
-  <p>head body arms waist legs</p>
-
+    <h2>Headwear</h2>
     <% armor.forEach(armor => { %>
-      <div>
-        <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
-        <p><%= armor.armorType %> </p>
-        <p><%= armor.defense %> </p>
-      </div>
+      <% if (armor.armorType == 'Head'){ %> 
+        <div>
+          <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
+          <p><%= armor.armorType %> </p>
+          <p><%= armor.defense %> </p>
+        </div>
+      <% }  %>
     <% }); %> 
-
+    <br>
+    <h2>Not Headwear</h2>
+    <% armor.forEach(armor => { %>
+      <% if (armor.armorType !== 'Head'){ %> 
+        <div>
+          <p><%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  </p>
+          <p><%= armor.armorType %> </p>
+          <p><%= armor.defense %> </p>
+        </div>
+      <% }  %>
+    <% }); %> 
 </form>
-
 </section>
 
 <%- include('../partials/footer') %>

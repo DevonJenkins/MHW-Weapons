@@ -53,9 +53,7 @@
   </label>
 <button type="submit">Add Armor</button>
 </form>
-
 </section>
-
 
 <section>
     <% if (armor.length){ %> 
@@ -70,24 +68,21 @@
     <h2>Headwear</h2>
     <% armor.forEach(armor => { %>
       <% if (armor.armorType == 'Head'){ %> 
-
-      <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
-        <li>
-          <%= armor.name %> 
-          <%= armor.armorType %>
-          <%= armor.defense %>  
-          <%= armor.skill %>   
-          <button>X</button>
-        
-        </li>
-      </form>
+        <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+          <li>
+            <%= armor.name %> 
+            <%= armor.armorType %>
+            <%= armor.defense %>  
+            <%= armor.skill %>   
+            <button>X</button>
+          </li>
+        </form>
       <% }  %>
     <% }); %> 
     <br>
     <h2>Not Headwear</h2>
     <% armor.forEach(armor => { %>
       <% if (armor.armorType !== 'Head'){ %> 
-
         <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
           <li>
             <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
@@ -97,7 +92,6 @@
         </form>
       <% }  %>
     <% }); %> 
-</form>
 </section>
 
 <%- include('../partials/footer') %>

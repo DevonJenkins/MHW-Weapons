@@ -1,17 +1,15 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<% title = 'Hello' %> 
+<% title = 'Welcome' %> 
 <main>
-  <h1>Welcome, <%= user ? user.profile.name : "guest" %></h1>
+  <h1>Welcome, <%= user ? user.profile.name : "hunter" %></h1>
 <% if(!user){ %>
-    <h2>Welcome Message for guest</h2>
-    <h3>As a guest you can...</h3>
-    <h3>perks for being a user</h3>
+    <h3>
+      As a guest you can view all the builds made by users. Sign in with google to make your own!
+    </h3>
     
   <% } %>  
-
-
 
   <% if (user?.profile.avatar) { %>
     <div>
@@ -20,7 +18,13 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
-  <% } %>
-</main>
+  <% }else{ %>
+    <div>
+        <img src="https://numskull.com/wp-content/uploads/Monster-Hunter-Logo-1.png" alt="">
+        <img src="" alt="">
+    </div>
+  
+    <% } %>
+  </main>
 
 <%- include('./partials/footer') %>

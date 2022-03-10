@@ -5,17 +5,21 @@
 <body>
   <nav>
   
-      <a href="/weapons" <%- title === 'View Weapons' ? 'class="active"' : '' %> > View Weapons</a>  
-      <a href="/armors/new" <%- title === 'Add Armor' %> > Add Armor</a> 
-        <% if (user) { %>
-          <a href="/auth/logout">
-            <button id="logout-btn" type="submit">Logout</button>
-          </a>
-        <% } else { %>
-          <a href="/auth/google" class="siwg-link">
-            <button type="submit" class="siwg">
-              <img id="siwg-image" alt="Sign in with Google" />
-            </button>
-          </a>
-        <% } %>
+      <a href="/weapons" class="nav-btn"<%- title === 'View Weapons' %> >
+          View Weapons
+      </a>  
+      <% if (user) { %>
+        <a href="/armors/new" class="nav-btn" <%- title === 'Add Armor' %> >
+            Add Armor
+        </a> 
+      <a href="/auth/logout">
+        <button id="logout-btn" type="submit">Logout</button>
+      </a>
+    <% } else { %>
+      <a href="/auth/google" class="siwg-link">
+        <button type="submit" class="siwg">
+          <img id="siwg-image" alt="Sign in with Google" />
+        </button>
+      </a>
+    <% } %>
   </nav>

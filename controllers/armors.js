@@ -5,7 +5,7 @@ function newArmor(req, res){
   .then(armor =>{ 
     res.render('armors/new', {
       armor,
-      title: "add armor"
+      title: "Add Armor"
     })
   })
   .catch(err => {

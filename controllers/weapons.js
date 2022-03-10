@@ -16,7 +16,7 @@ function index(req, res){
 }
 
 function create(req, res){
-  //req.body.owner = req.user.profile._id
+  req.body.owner = req.user.profile._id
 
   Weapon.create(req.body)
   .then(weapon => {
@@ -30,8 +30,8 @@ function create(req, res){
 
 function show(req, res){
   Weapon.findById(req.params.id)
+  .populate("owner")
   .populate('armors')
-  //.populate("owner")
   .then( weapon => {
     Armor.find({_id: {$nin: weapon.armors}}).then( armors =>{ 
 
@@ -53,14 +53,14 @@ function deleteWeapon(req, res){
 
   Weapon.findById(req.params.id)
   .then(weapon => {
-    // if (weapon.owner.equals(req.user.profile._id)){
+      if (weapon.owner.equals(req.user.profile._id)){
       weapon.delete()
       .then(() => {
         res.redirect("/weapons")
       })
-    // }else{
-    //   throw new Error ("UNAUTHORIZED ACCESS")
-    // }
+      }else{
+        throw new Error ("UNAUTHORIZED ACCESS")
+      }
   })
   .catch(err => {
     console.log(err)
@@ -87,15 +87,14 @@ function update(req, res){
   console.log('console.log:')
   Weapon.findById(req.params.id)
   .then(weapon => {
-    //if (weapon.owner.equals(req.user.profile._id)){
+    if (weapon.owner.equals(req.user.profile._id)){
       weapon.updateOne(req.body, {new: true})
       .then(() => {
         res.redirect(`/weapons/${req.params.id}`)
       })
-    }
-  //}else {
-  //   throw new Error("NOT AUTHORIZED")
-  // }
+    }else {
+      throw new Error("NOT AUTHORIZED")
+    }}
   )
   .catch(err => {
     console.log(err)

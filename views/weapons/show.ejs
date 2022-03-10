@@ -3,72 +3,74 @@
 <%- include('../partials/nav') %>
 
 
+<main>
+
+  <h1>Show Page</h1>
 
 
-<h1>Show Page</h1>
+  <section>
+    <p>From the armory of <%= weapon.owner.name %></p>
 
+    <h1><%= weapon.name %> 🗡🦖</h1>
 
-<section>
-	<p>From <%= //weapon.owner.name %>so n so's armory </p>
-
-  <h1><%= weapon.name %> 🗡🦖</h1>
-
-only show if user
-
-
+<% if(weapon.owner.equals(user?.profile._id)){ %> 
+  
   <form action="/weapons/<%= weapon._id %>/edit" method="GET">
     <button class="btn" type="submit">Edit this weapon </button>
   </form>
-
+  
   <form action="/weapons/<%= weapon._id %>?_method=DELETE" method="POST">
     <button class="btn" type="submit">Delete this weapon 😠</button>
   </form>
   <h2>This is a weapon %></h2>
   <h2>stats table here</h2>
 </section>
+<% }%> 
 
 
-<label for="armors">Compatible Armor Pieces</label>
+  <label for="armors">Compatible Armor Pieces</label>
 
-    <% if (weapon.armors.length){ %>
-  <table>
-    <thead>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Defense</th>
-    </thead>
-    <tbody>
-      <% weapon.armors.forEach(armor => { %>
-        <tr>
-          
-          <td><%= armor.name %></td>
-          <td><%= armor.type %></td>
-          <td><%= armor.defense %></td>
-          
-        </tr>
-          <% }) %> 
-      </tbody>
-    </table>
-      <% }else{ %>
-        <h1>no armor pieces added yet</h1>
-        <% } %>  
+      <% if (weapon.armors.length){ %>
+    <table>
+      <thead>
 
-
-
-  <form action="/weapons/<%= weapon.id %>/armors " method="POST">
-  <select name="armorId" id="">
-    <% armors.forEach( armor => { %>
-
-      <option value="<%=armor._id%>">
-        <%= armor.name %> 
+        <th>Name</th>
+        <th>Type</th>
+        <th>Defense</th>
         
-      </option>
-      <% }) %> 
+      </thead>
+      <tbody>
+        <% weapon.armors.forEach(armor => { %>
+          <tr>
+            
+            <td><%= armor.name %></td>
+            <td><%= armor.type %></td>
+            <td><%= armor.defense %></td>
+            
+          </tr>
+            <% }) %> 
+        </tbody>
+      </table>
+        <% }else{ %>
+          <h1>no armor pieces added yet</h1>
+          <% } %>  
 
-  </select>
-  <button type="submit">submit</button>
-  </form>
 
+
+    <form action="/weapons/<%= weapon.id %>/armors " method="POST">
+      <select name="armorId" id="">
+        <% armors.forEach( armor => { %>
+
+          <option value="<%=armor._id%>">
+            <%= armor.name %> 
+            
+          </option>
+          <% }) %> 
+
+      </select>
+      <button type="submit">submit</button>
+    </form>
+</main>
 
 
 <%- include('../partials/footer') %>

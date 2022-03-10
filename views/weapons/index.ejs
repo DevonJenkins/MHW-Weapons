@@ -2,22 +2,24 @@
 
 <%- include('../partials/nav') %>
 
+<main>
 
-<h1>ALL THE WEAPONS</h1>
-
-<section>
-  <% //if(user){ %>
-    <h2>add a weapon</h2>
-<form action="/weapons" method="POST">
-  <label >
-      Weapon Name:
-      <input type="text" name="name" id="new-weapon-input">
-  </label>
-<button type="submit">Add Weapon</button>
-</form>
-    <% //} %>  
-</section>
-
+  <h1>ALL THE WEAPONS</h1>
+  
+  <section>
+    <% if(user){ %>
+      <h2>add a weapon</h2>
+      <form action="/weapons" method="POST">
+        <label >
+          Weapon Name:
+          <input type="text" name="name" id="new-weapon-input">
+        </label>
+        <button type="submit">Add Weapon</button>
+      </form>
+      <% } %>  
+    </section>
+</main>
+    
 <% if(weapons.length){   %> 
 <main>
   <h1>Weapons List</h1>

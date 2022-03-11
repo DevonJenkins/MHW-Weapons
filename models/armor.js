@@ -6,10 +6,9 @@ const armorSchema = new Schema({
   name: {type: String, required: true, unique: true},
   armorType: String,
   defense: Number,
-  skill: String
-
+  skill: String,
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
-
 
 const Armor = mongoose.model('Armor', armorSchema)
 

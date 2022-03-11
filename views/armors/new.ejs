@@ -74,7 +74,9 @@
               <%= armor.armorType %>
               <%= armor.defense %>  
               <%= armor.skill %>   
-              <button>X</button>
+              <% if(armor.owner.equals(user?.profile._id)){ %> 
+                <button>X</button>
+              <% } %> 
             </li>
           </form>
         <% }  %>

@@ -4,12 +4,8 @@
 
 
 <main>
-
-  <h1>Show Page</h1>
-
-
   <section>
-    <p>From the armory of <%= weapon.owner.name %></p>
+    <h1>From the armory of <%= weapon.owner.name %></h1>
 
     <h1><%= weapon.name %> 🗡🦖</h1>
 
@@ -22,13 +18,61 @@
   <form action="/weapons/<%= weapon._id %>?_method=DELETE" method="POST">
     <button class="btn" type="submit">Delete this weapon 😠</button>
   </form>
-  <h2>This is a weapon %></h2>
-  <h2>stats table here</h2>
 </section>
 <% }%> 
 
+<h2>stats table here</h2>
+<table>
+  <thead>
+    <!-- <th>Name</th>     -->
+    <th>Type</th>    
+    <th>Sharpness</th>    
+    <th>Affinity</th>    
+    <th>Element</th>    
+    <th>Elderseal</th>    
+    <th>Slots</th>    
+    <th>Defense Bonuses</th>    
+    <th>Notes</th>    
+    <th>Phial Type</th>    
+    <th>Shelling Type</th>    
+    <th>Shelling Level</th>    
+    <th>Kinsect Bonus</th>    
+    <th>Coatings</th>    
+    <th>Custom Mods</th>    
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= //weapon.name %></td>
+      <td><%= weapon.weaponType %></td>
+      <td><%= weapon.sharpness %></td>
+      <td><%= weapon.affinity %></td>
+      <td><%= weapon.element %></td>
+      <td><%= weapon.elderseal %></td>
+      <td><%= weapon.slots %></td>
+      <td><%= weapon.defenseBonuses %></td>
 
-  <label for="armors">Compatible Armor Pieces</label>
+      <td><%= weapon.notes %></td>
+
+      <td><%= weapon.phialType %></td>
+
+      <td><%= weapon.shellingType %></td>
+
+      <td><%= weapon.shellingLevel %></td>
+
+      <td><%= weapon.kinsectBonus %></td>
+      
+      <td><%= weapon.coatings %></td>
+
+      <td><%= weapon.customMods %></td>
+
+
+    </tr>
+  </tbody>
+</table>
+
+  <h1>
+    <label for="armors">Compatible Armor Pieces:</label>
+  </h1>
 
       <% if (weapon.armors.length){ %>
     <table>
@@ -37,15 +81,17 @@
         <th>Name</th>
         <th>Type</th>
         <th>Defense</th>
-        
+        <th>Skill</th>
+
       </thead>
       <tbody>
         <% weapon.armors.forEach(armor => { %>
           <tr>
             
             <td><%= armor.name %></td>
-            <td><%= armor.type %></td>
+            <td><%= armor.armorType %></td>
             <td><%= armor.defense %></td>
+            <td><%= armor.skill %></td>
             
           </tr>
             <% }) %> 
@@ -63,6 +109,9 @@
 
           <option value="<%=armor._id%>">
             <%= armor.name %> 
+            <%= armor.armorType %> 
+            <%= armor.defense %> 
+            <%= armor.skill %> 
             
           </option>
           <% }) %> 

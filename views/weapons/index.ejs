@@ -3,18 +3,57 @@
 <%- include('../partials/nav') %>
 
 <main>
-
-  <h1>ALL THE WEAPONS</h1>
+<h1>Weapons</h1>
   
   <section>
     <% if(user){ %>
-      <h2>add a weapon</h2>
+      <h2>Add a Weapon</h2>
       <form action="/weapons" method="POST">
         <label >
           Weapon Name:
           <input type="text" name="name" id="new-weapon-input">
         </label>
         <button type="submit">Add Weapon</button>
+        
+        <br>
+        <label >
+          Weapon Type:
+          <select type="text" name="armorType" id="new-armor-input">
+            <option value="Greatsword">Greatsword</option>
+            <option value="Sword and Shield">Sword and Shield</option>
+            <option value="Dual Blades">Dual Blades</option>
+            <option value="Long Sword">Long Sword</option>
+            <option value="Hammer">Hammer</option>
+            <option value="Hunting Horn">Hunting Horn</option>
+            <option value="Gunlance">Gunlance</option>
+            <option value="Switch Axe">Switch Axe</option>
+            <option value="Charge Blade">Charge Blade</option>
+            <option value="Insect Glaive">Glaive</option>
+            <option value="Bow">Bow</option>
+            <option value="Light Bowgun">Light Bowgun</option>
+            <option value="Heavy Bowgun">Heavy Bowgun</option>
+          </select>
+        </label>
+        <br>
+        <label >
+          Weapon Sharpness:
+          <select name="sharpness" id="">
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="White">White</option>
+            <option value="Purple">Purple</option>
+          </select>
+        </label>
+        <br>
+        <label >
+          Weapon Affinity:
+          <input type="number" name="affinity" id="new-weapon-input">
+        </label>
+        <button type="submit">Add Weapon</button>
+        
       </form>
       <% } %>  
     </section>
@@ -26,13 +65,15 @@
   <table>
     <thead>
       <tr>
-        <th>Weapon Name</th>
+        <th>Name</th>
+        <th>Type</th>
       </tr>
     </thead>
     <tbody>
       <% weapons.forEach( weapon => { %>
         <tr>
           <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+          <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.weaponType %> </a></td>
       <% }) %> 
     </tbody>
   </table>

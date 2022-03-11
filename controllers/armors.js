@@ -15,6 +15,7 @@ function newArmor(req, res){
   }
 
 function create(req, res){
+  req.body.owner = req.user.profile._id
   Armor.create(req.body)
   .then(armor => {
     res.redirect('/armors/new')
@@ -28,11 +29,16 @@ function create(req, res){
 function deleteArmor(req, res) {
   console.log('hitting controller')
   Armor.findById(req.params.id)
+  
   .then(armor =>{
+    if (weapon.owner.equals(req.user.profile._id)){
     armor.delete()
     .then(() => {
       res.redirect('/armors/new')
     })
+  } else {
+    throw new Error ("unauthorized access")
+  }
   })
   .catch(err => {
     console.log(err)

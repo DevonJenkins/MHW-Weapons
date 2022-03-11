@@ -5,8 +5,8 @@ const Schema = mongoose.Schema
 const weaponSchema = new Schema({
   name: String,
   weaponType: String,
-  sharpness: Number,
-  affinity: String,
+  sharpness: String,
+  affinity: Number,
   element: String,
   elderSeal: String,
   slots: Number,

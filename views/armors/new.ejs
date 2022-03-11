@@ -76,7 +76,9 @@
           <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
             <li>
               <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
-              <button>X</button>
+              <% if(armor.owner.equals(user?.profile._id)){ %> 
+                <button>X</button>
+              <% } %> 
               
             </li>
           </form>
@@ -89,7 +91,10 @@
           <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
             <li>
               <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
-              <button>X</button>
+              <% if(armor.owner.equals(user?.profile._id)){ %> 
+                <button>X</button>
+              <% } %> 
+
               
             </li>
           </form>
@@ -102,7 +107,10 @@
           <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
             <li>
               <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
-              <button>X</button>
+              
+              <% if(armor.owner.equals(user?.profile._id)){ %> 
+                <button>X</button>
+              <% } %> 
               
             </li>
           </form>
@@ -115,7 +123,9 @@
           <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
             <li>
               <%= armor.name %> <%= armor.armorType %> <%= armor.defense %> 
-              <button>X</button>
+              <% if(armor.owner.equals(user?.profile._id)){ %> 
+                <button>X</button>
+              <% } %> 
               
             </li>
           </form>

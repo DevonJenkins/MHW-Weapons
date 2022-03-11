@@ -2,7 +2,7 @@
 
 --- 
 ## **Description:**
- The purpose of this app is to assist Monster Hunter Worlds players in planning,creating, saving, and viewing weapon builds. My goal in making this was to build a fully functional CRUD app that is both useful and tied to something I really enjoy. 
+ The purpose of this app is to assist Monster Hunter Worlds players in planning, creating, saving, and viewing weapon builds. My goal in making this was to build a fully functional CRUD app that is both useful and tied to something I really enjoy. 
 
 ---
 
@@ -20,7 +20,7 @@
 **Screenshots to be updated once styling and layout are finished**
 
 ![Landing Page](
-https://i.imgur.com/AfRefsZ.pngg)
+https://i.imgur.com/qU3yvtc.png)
 
 
 ---

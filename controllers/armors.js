@@ -31,7 +31,7 @@ function deleteArmor(req, res) {
   Armor.findById(req.params.id)
   
   .then(armor =>{
-    if (weapon.owner.equals(req.user.profile._id)){
+    if (armor.owner.equals(req.user.profile._id)){
     armor.delete()
     .then(() => {
       res.redirect('/armors/new')

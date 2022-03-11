@@ -3,10 +3,10 @@
 <main>
   <section>
     <h1>Edit the Weapon! </h1>
-    <form action="/weapons/<%= weapon._id %>?_method=PUT" method="POST">
+    <form action="/weapons/<%= weapon._id %>?_method=PUT" method="POST" autocomplete="off">
       <label >
         Weapon Name:
-        <input type="text" name="name" id="new-weapon-input">
+        <input type="text" name="name" id="new-weapon-input" autocomplete="off">
       </label>
 
       

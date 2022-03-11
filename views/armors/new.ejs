@@ -7,25 +7,13 @@
 <main>
   <h1><%= title %> </h1>
   <section>
-    <select name="" id="">
-      <% armor.forEach(armor => { %>
-        <option>
-            <%= armor.name %>
-            <%= armor.armorType %>
-            <%= armor.defense %>
-            <%= armor.skill %>
-        </option>
-      <% }); %> 
-        
-        <h2>add an armor piece</h2>
     
-        <select name="" id="">
     <form action="/armors" method="POST">
       <!-- write out input model within this form -->
     <label >
         Armor Name:
         <br>
-        <input type="text" name="name" id="new-armor-input">
+        <input type="text" name="name" id="new-armor-input" autocomplete="off">
         <br>
     </label>
     <label >
@@ -43,13 +31,13 @@
     <label >
         Defense Rating:
         <br>
-        <input type="text" name="defense" id="new-armor-input">
+        <input type="text" name="defense" id="new-armor-input" autocomplete="off">
         <br>
     </label>
     <label >
             Armor Skill:
             <br>
-        <input type="text" name="skill" id="new-armor-input">
+        <input type="text" name="skill" id="new-armor-input" autocomplete="off">
     </label>
   <button type="submit">Add Armor</button>
   </form>
@@ -82,12 +70,51 @@
         <% }  %>
       <% }); %> 
       <br>
-      <h2>Not Headwear</h2>
+      <h2>Body</h2>
       <% armor.forEach(armor => { %>
-        <% if (armor.armorType !== 'Head'){ %> 
+        <% if (armor.armorType == 'Body'){ %> 
           <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
             <li>
               <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+              <button>X</button>
+              
+            </li>
+          </form>
+        <% }  %>
+      <% }); %> 
+      <br>
+      <h2>Arms</h2>
+      <% armor.forEach(armor => { %>
+        <% if (armor.armorType == 'Arms'){ %> 
+          <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+            <li>
+              <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+              <button>X</button>
+              
+            </li>
+          </form>
+        <% }  %>
+      <% }); %> 
+      <br>
+      <h2>Waist</h2>
+      <% armor.forEach(armor => { %>
+        <% if (armor.armorType == 'Waist'){ %> 
+          <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+            <li>
+              <%= armor.name %> <%= armor.armorType %> <%= armor.defense %>  
+              <button>X</button>
+              
+            </li>
+          </form>
+        <% }  %>
+      <% }); %> 
+      <br>
+      <h2>Legs</h2>
+      <% armor.forEach(armor => { %>
+        <% if (armor.armorType == 'Legs'){ %> 
+          <form action="/armors/<%= armor._id %>?_method=DELETE" method="POST">
+            <li>
+              <%= armor.name %> <%= armor.armorType %> <%= armor.defense %> 
               <button>X</button>
               
             </li>

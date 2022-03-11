@@ -8,7 +8,7 @@
   <section>
     <% if(user){ %>
       <h2>Add a Weapon</h2>
-      <form action="/weapons" method="POST">
+      <form action="/weapons" method="POST" autocomplete="off" >
         <label >
           Weapon Name:
           <input type="text" name="name" id="new-weapon-input">
@@ -157,7 +157,7 @@
     
 <% if(weapons.length){   %> 
 <main>
-  <h1>Weapons List</h1>
+  <h1>All Weapons</h1>
   <table>
     <thead>
       <tr>
@@ -179,22 +179,284 @@
     </thead>
     <tbody>
       <% weapons.forEach( weapon => { %>
-        <tr>
-          <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
-          <td> <%= weapon.weaponType %> </td>
-          <td> <%= weapon.attackPower%> </td>
-          <td> <%= weapon.sharpness %> </td>
-          <td> <%= weapon.affinity %>% </td>
-          <td> <%= weapon.element %> </td>
-          <td> <%= weapon.elderseal %> </td>
-          <td> <%= weapon.slots %> </td>
-          <td> <%= weapon.defenseBonus %> </td>
-          <td> <%= weapon.notes %> </td>
-          <td> <%= weapon.phialType %> </td>
-          <td> <%= weapon.shellingType %> </td>
-          <td> <%= weapon.shellingLevel %> </td>
-          <td> <%= weapon.kinsectBonus %> </td>
-      <% }) %> 
+        <% if (weapon.weaponType == 'Greatsword') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+          <% }  %>  
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+        <% if (weapon.weaponType == 'Sword and Shield') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+        <% }  %>  
+        <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+
+          <% if (weapon.weaponType == 'Dual Blades') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+            <% }  %>  
+            <% }) %> 
+          
+            <% weapons.forEach( weapon => { %>
+
+        <% if (weapon.weaponType == 'Long Sword') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+        <% }  %>  
+        <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+
+        <% if (weapon.weaponType == 'Hammer') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+        <% }  %>  
+        <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+
+          <% if (weapon.weaponType == 'Hunting Horn') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+          <% } %>  
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+ 
+
+          <% if (weapon.weaponType == 'Gunlance') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+          <% } %> 
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+          <% if (weapon.weaponType == 'Switch Axe') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+          <% } %>  
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+          <% if (weapon.weaponType == 'Charge Blade') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+          <% }  %>  
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+          <% if (weapon.weaponType == 'Insect Glaive') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+            <% }  %>  
+            <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+          <% if (weapon.weaponType == 'Bow') {%>
+            <tr>
+              <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+              <td> <%= weapon.weaponType %> </td>
+              <td> <%= weapon.attackPower%> </td>
+              <td> <%= weapon.sharpness %> </td>
+              <td> <%= weapon.affinity %>% </td>
+              <td> <%= weapon.element %> </td>
+              <td> <%= weapon.elderseal %> </td>
+              <td> <%= weapon.slots %> </td>
+              <td> <%= weapon.defenseBonus %> </td>
+              <td> <%= weapon.notes %> </td>
+              <td> <%= weapon.phialType %> </td>
+              <td> <%= weapon.shellingType %> </td>
+              <td> <%= weapon.shellingLevel %> </td>
+              <td> <%= weapon.kinsectBonus %> </td>
+            </tr>
+          <% } %>   
+          <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+        <% if (weapon.weaponType == 'Light Bowgun') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+        <% }  %>  
+        <% }) %> 
+          
+          <% weapons.forEach( weapon => { %>
+        <% if (weapon.weaponType == 'Heavy Bowgun') {%>
+          <tr>
+            <td> <a href="/weapons/<%= weapon._id %> "><%= weapon.name %> </a></td>
+            <td> <%= weapon.weaponType %> </td>
+            <td> <%= weapon.attackPower%> </td>
+            <td> <%= weapon.sharpness %> </td>
+            <td> <%= weapon.affinity %>% </td>
+            <td> <%= weapon.element %> </td>
+            <td> <%= weapon.elderseal %> </td>
+            <td> <%= weapon.slots %> </td>
+            <td> <%= weapon.defenseBonus %> </td>
+            <td> <%= weapon.notes %> </td>
+            <td> <%= weapon.phialType %> </td>
+            <td> <%= weapon.shellingType %> </td>
+            <td> <%= weapon.shellingLevel %> </td>
+            <td> <%= weapon.kinsectBonus %> </td>
+          </tr>
+        <% }  %>  
+      
+        <% }) %> 
     </tbody>
   </table>
 <% }else{ %>

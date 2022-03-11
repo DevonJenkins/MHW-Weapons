@@ -6,9 +6,8 @@
   <h1>Welcome, <%= user ? user.profile.name : "hunter" %></h1>
 <% if(!user){ %>
     <h3>
-      As a guest you can view all the builds made by users. Sign in with google to make your own! For now the app is only accessible through mobile in landscape mode. 
+      As a guest you can view all the builds made by users. Sign in with google to make your own! For now the app is only accessible through mobile in landscape mode. Stay tuned for updates, bug fixes, and new features!
     </h3>
-    
   <% } %>  
 
   <% if (user?.profile.avatar) { %>

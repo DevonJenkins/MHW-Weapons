@@ -23,7 +23,6 @@
 https://i.imgur.com/AfRefsZ.pngg)
 
 
-
 ---
 
 ## **Credits:** 
@@ -64,3 +63,7 @@ https://i.imgur.com/AfRefsZ.pngg)
 - [ ] Add elements to armor creation menu
   
 ---
+
+## **Planning Materials**
+
+[Click here to open the view my trello page](https://trello.com/b/lGtPygrO/mhw-weapons)

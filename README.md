@@ -23,7 +23,7 @@ https://i.imgur.com/qU3yvtc.png)
 ---
 
 ## **Credits:** 
- background image: (https://i.imgur.com/aHv08BP.jpg)
+ [Background Image](https://www.reddit.com/r/MonsterHunter/comments/2wbuba/made_a_monster_hunter_background_for_you_awesome/) @ reddit.com/r/MonsterHunter/comments
 
 ---
 ## **Technologies Used:**

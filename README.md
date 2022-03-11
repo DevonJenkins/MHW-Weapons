@@ -17,7 +17,7 @@
 ---
 
 ## **Screenshots:**
-**Screenshots to be updated once styling and layout are finished**
+
 
 ![Landing Page](
 https://i.imgur.com/qU3yvtc.png)

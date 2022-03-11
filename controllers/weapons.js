@@ -37,7 +37,7 @@ function show(req, res){
 
       res.render('weapons/show',{
         weapon,
-        title: "weapon details",
+        title: "Weapon Details",
         armors
       })
     })
@@ -49,7 +49,6 @@ function show(req, res){
 }
 
 function deleteWeapon(req, res){
-  console.log('weapons delete')
 
   Weapon.findById(req.params.id)
   .then(weapon => {
@@ -84,7 +83,6 @@ function edit(req, res){
 }
 
 function update(req, res){
-  console.log('console.log:')
   Weapon.findById(req.params.id)
   .then(weapon => {
     if (weapon.owner.equals(req.user.profile._id)){
@@ -103,7 +101,6 @@ function update(req, res){
 }
 
 function addArmor(req, res) {
-  console.log('add armor')
   Weapon.findById(req.params.id)
   .then(weapon => {
     weapon.armors.push(req.body.armorId)
@@ -111,12 +108,6 @@ function addArmor(req, res) {
     res.redirect(`/weapons/${req.params.id}`)
   })
 }
-
-
-//show function to illustrate compatible armor pieces 
-
-
-//remember to go back and uncomment those owner/profile id details. this is necessary for future authorization/guest restriction. 
 
 
 export {

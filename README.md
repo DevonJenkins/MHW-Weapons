@@ -11,9 +11,6 @@
 [Click here to open the MHW Weapons Guide](https://mhw-weapons-guide.herokuapp.com/)
 
 
-
-(ignore the terrible styling for now. This will look better tonight)
-
 ---
 
 ## **Screenshots:**

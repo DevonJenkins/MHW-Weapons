@@ -58,5 +58,9 @@ https://i.imgur.com/AfRefsZ.pngg)
 - [ ] Ogranize armor pieces into armor sets.
 - [ ] Comments
 - [ ] The weapons show page should have user comments, user armor sets, user meals, and user monsters. This is what the app needs to live up to its full potential. 
+- [ ] Add kinsects to insect glaives
+- [ ] Add songs to hunting horn
+- [ ] Add a status effects dropdown to the layout
+- [ ] Add elements to armor creation menu
   
 ---

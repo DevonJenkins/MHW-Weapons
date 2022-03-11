@@ -32,13 +32,24 @@
     <th>Elderseal</th>    
     <th>Slots</th>    
     <th>Defense Bonuses</th>    
-    <th>Notes</th>    
-    <th>Phial Type</th>    
-    <th>Shelling Type</th>    
-    <th>Shelling Level</th>    
+    <% if(weapon.weapontype == 'Hunting Horn'){%> 
+      <th>Notes</th>  
+      <% } %> 
+
+  <% if(weapon.weapontype == 'Switch Axe'){%> 
+      <th>Phial Type</th>    
+  <% } %> 
+
+  <% if(weapon.weapontype == 'Gunlance'){%> 
+        <th>Shelling Type</th>    
+        <th>Shelling Level</th>    
+  <% } %> 
+
+  <% if(weapon.weapontype == 'Insect Glaive'){%> 
     <th>Kinsect Bonus</th>    
-    <th>Coatings</th>    
-    <th>Custom Mods</th>    
+  <% } %> 
+
+      
   </thead>
   <tbody>
     <tr>
@@ -49,23 +60,25 @@
       <td><%= weapon.element %></td>
       <td><%= weapon.elderseal %></td>
       <td><%= weapon.slots %></td>
-      <td><%= weapon.defenseBonuses %></td>
+      <td><%= weapon.defenseBonus %></td>
 
-      <td><%= weapon.notes %></td>
+      <% if(weapon.weapontype == 'Hunting Horn'){%> 
+        <td><%= weapon.notes %></td>
+        <% } %> 
 
-      <td><%= weapon.phialType %></td>
-
-      <td><%= weapon.shellingType %></td>
-
-      <td><%= weapon.shellingLevel %></td>
-
-      <td><%= weapon.kinsectBonus %></td>
-      
-      <td><%= weapon.coatings %></td>
-
-      <td><%= weapon.customMods %></td>
+      <% if(weapon.weapontype == 'Switch Axe'){%> 
+          <td><%= weapon.phialType %></td>
+          <% } %> 
 
 
+      <% if(weapon.weapontype == 'Gunlance'){%> 
+        <td><%= weapon.shellingType %></td>
+        <td><%= weapon.shellingLevel %></td>
+        <% } %> 
+
+      <% if(weapon.weapontype == 'Insect Glaive'){%> 
+          <td><%= weapon.kinsectBonus %></td>
+      <% } %> 
     </tr>
   </tbody>
 </table>
@@ -77,22 +90,18 @@
       <% if (weapon.armors.length){ %>
     <table>
       <thead>
-
         <th>Name</th>
         <th>Type</th>
         <th>Defense</th>
         <th>Skill</th>
-
       </thead>
       <tbody>
         <% weapon.armors.forEach(armor => { %>
           <tr>
-            
             <td><%= armor.name %></td>
             <td><%= armor.armorType %></td>
             <td><%= armor.defense %></td>
             <td><%= armor.skill %></td>
-            
           </tr>
             <% }) %> 
         </tbody>
@@ -112,7 +121,6 @@
             <%= armor.armorType %> 
             <%= armor.defense %> 
             <%= armor.skill %> 
-            
           </option>
           <% }) %> 
 

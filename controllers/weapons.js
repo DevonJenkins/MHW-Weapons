@@ -19,7 +19,7 @@ function create(req, res){
   req.body.owner = req.user.profile._id
 
   Weapon.create(req.body)
-  .then(weapon => {
+  .then(weapon => {``
     res.redirect("/weapons")
   })
   .catch(err => {

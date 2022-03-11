@@ -23,27 +23,21 @@ https://i.imgur.com/qU3yvtc.png)
 ---
 
 ## **Credits:** 
- background image: https://i.imgur.com/aHv08BP.jpg
+ background image: (https://i.imgur.com/aHv08BP.jpg)
 
 ---
 ## **Technologies Used:**
-- ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat-square)
+ ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat-square)
+ ![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square)
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square)
 
-- ![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square)
+![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat-square)
+![Oauth badge](https://img.shields.io/badge/-Google%20Oauth-white?style=flat-square)
+![Express Badge](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
 
-- ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square)
-
-- ![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat-square)
-
--  ![Oauth badge](https://img.shields.io/badge/-Google%20Oauth-white?style=flat-square)
-
-- ![Express Badge](https://img.shields.io/badge/Express.js-404D59?style=flat-square)
-
-- ![MONGOOSE](https://img.shields.io/badge/-Mongoose-inactive?logo=MongoDB&logoColor=white&style=flat-square)
-
-- ![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat-square)
-
-- ![Heroku Badge](https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat-square)
+ ![MONGOOSE](https://img.shields.io/badge/-Mongoose-inactive?logo=MongoDB&logoColor=white&style=flat-square)
+ ![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat-square)
+![Heroku Badge](https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat-square)
 
 ---
 ## **Icebox Features:**
@@ -58,6 +52,7 @@ https://i.imgur.com/qU3yvtc.png)
 - [ ] Add songs to hunting horn
 - [ ] Add a status effects dropdown to the layout
 - [ ] Add elements to armor creation menu
+- [ ] Pagination to organize weapons by type
   
 ---
 

@@ -41,7 +41,8 @@ main {
   flex-direction: column;
   color: white;
   background: rgba(5, 4, 1, 0.4);
-  margin: 0px 40px 0px 40px;
+  margin: 0px auto;
+  max-width: 80%;
 }
 
 h1 {

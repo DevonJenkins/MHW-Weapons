@@ -111,22 +111,25 @@
           <% } %>  
 
 
-
-    <form action="/weapons/<%= weapon.id %>/armors " method="POST">
-      <select name="armorId" id="">
-        <% armors.forEach( armor => { %>
-
-          <option value="<%=armor._id%>">
-            <%= armor.name %> 
-            <%= armor.armorType %> 
-            <%= armor.defense %> 
-            <%= armor.skill %> 
-          </option>
-          <% }) %> 
-
+<% if(user){ %> 
+  <form action="/weapons/<%= weapon.id %>/armors " method="POST">
+    <select name="armorId" id="">
+      <% armors.forEach( armor => { %>
+        
+        <option value="<%=armor._id%>">
+          <%= armor.name %> 
+          <%= armor.armorType %> 
+          <%= armor.defense %> 
+          <%= armor.skill %> 
+        </option>
+        <% }) %> 
+        
       </select>
       <button type="submit">submit</button>
     </form>
+    <% }else {%> 
+      <h2>Sign in with google to add your own armor pieces to the weapon</h2>
+    <% }%> 
 </main>
 
 
